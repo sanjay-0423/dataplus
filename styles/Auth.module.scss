@@ -1,0 +1,486 @@
+$darkBlue: #091e42;
+$lightBlue: #3699ff;
+
+$XSmall: 425px;
+$Small: 575.98px;
+$Medium: 991px;
+$Large: 1200px;
+$XLarge: 1339px;
+$XXLarge: 1600px;
+
+.logoBox {
+    width: 91%;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    inset: 0 0 auto 0;
+    .logo {
+        position: relative;
+        width: 150px;
+        max-width: 100%;
+        aspect-ratio: 198/48;
+    }
+}
+
+.authContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+    padding: 80px 15px;
+    position: relative;
+
+    .authForm {
+        width: 550px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 40px;
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 40px 80px rgb(0 0 0 / 5%), 0px 8px 13px rgb(0 0 0 / 3%);
+        border-radius: 20px;
+
+        form {
+            display: flex;
+            flex-flow: column;
+            position: relative;
+            background-color: #ffffffb8;
+
+            .titleBox {
+                text-align: center;
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 25px;
+                    color: $darkBlue;
+                    margin: 0;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #b5b5c3;
+                    a {
+                        color: $lightBlue;
+                    }
+                }
+
+                @media (max-width: $XLarge) {
+                    h3 {
+                        font-size: 22px;
+                        margin-bottom: 0px;
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+
+            .passconFields {
+                @media (max-width: 500px) {
+                    flex-wrap: wrap;
+                    .inputBox {
+                        width: 100%;
+                        margin-right: 0px !important;
+                    }
+                }
+            }
+
+            .inputBox {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 28px;
+
+                label {
+                    font-weight: 500;
+                    font-size: 17px;
+                    color: $darkBlue;
+                    margin-bottom: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    a {
+                        color: #3699ff;
+                    }
+                }
+
+                input,
+                select {
+                    background: #f4f5f7;
+                    border: 2px solid #0000001f;
+                    border-radius: 4px;
+                    padding: 12px;
+                    font-size: 16px;
+                    color: $darkBlue;
+                    outline: none;
+
+                    &:focus {
+                        border-color: $lightBlue;
+                    }
+                }
+
+                input.blue,
+                select.blue,
+                .blue input {
+                    border-color: $lightBlue;
+                }
+
+                .error {
+                    margin: 5px 0px 0px;
+                    color: #ff0000;
+                }
+
+                svg {
+                    color: #8993a4;
+                    font-size: 20px;
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    cursor: pointer;
+                }
+
+                select {
+                    background-image: url("../public/images/down_arrow.svg");
+                    background-position: calc(100% - 14px) 50%;
+                    background-size: 18px;
+                    background-repeat: no-repeat;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                }
+
+                @media (max-width: $XXLarge) {
+                    margin-bottom: 15px;
+
+                    label {
+                        margin-bottom: 5px;
+                    }
+
+                    input,
+                    select {
+                        padding: 8px;
+                    }
+
+                    svg {
+                        right: 10px;
+                        top: 10px;
+                    }
+                }
+
+                @media (max-width: $XLarge) {
+                    margin-bottom: 15px;
+
+                    label {
+                        margin-bottom: 5px;
+                    }
+
+                    input,
+                    select {
+                        padding: 8px;
+                    }
+
+                    svg {
+                        right: 10px;
+                        top: 10px;
+                    }
+                }
+            }
+
+            .radioBox {
+                margin-bottom: 28px;
+
+                > div {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .error {
+                    margin: 5px 0px 0px;
+                    color: #ff0000;
+                }
+
+                input {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                label {
+                    margin: 0px 0px 0px 10px;
+                    color: #000000d9;
+
+                    a {
+                        color: $lightBlue;
+                    }
+                }
+
+                @media (max-width: $XXLarge) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            button[type="submit"] {
+                background: $lightBlue;
+                border-radius: 4px;
+                font-weight: 500;
+                font-size: 17px;
+                color: #fff;
+                border: none;
+                padding: 12px;
+                cursor: pointer;
+
+                &:active {
+                    opacity: 0.9;
+                }
+
+                &:disabled {
+                    opacity: 0.8;
+                }
+            }
+
+            .btnGroup {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                button {
+                    margin: 10px;
+                    width: 150px;
+                }
+                .cancelBtn {
+                    font-weight: 500;
+                    font-size: 17px;
+                    border: none;
+                    padding: 12px;
+                    background: rgba(34, 54, 241, 0.12);
+                    border-radius: 4px;
+                    color: #3699ff;
+                    cursor: pointer;
+                }
+            }
+
+            .formError {
+                color: #f12222;
+            }
+
+            .formMessage {
+                color: #3699ff;
+            }
+        }
+
+        @media (max-width: $XXLarge) {
+            padding: 25px;
+        }
+
+        @media (max-width: $XLarge) {
+            padding: 15px;
+        }
+    }
+}
+
+.formSpinner {
+    position: absolute;
+    inset: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff87;
+    z-index: 999;
+
+    .loading {
+        height: 0;
+        width: 0;
+        padding: 15px;
+        border: 6px solid #3699ff;
+        border-right-color: #0000;
+        border-radius: 22px;
+        -webkit-animation: rotate 1s infinite linear;
+        animation: rotate 1s infinite linear;
+    }
+
+    @-webkit-keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.login {
+    .formContainer {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+
+        .textBox {
+            width: 60%;
+            padding: 0px 15px;
+            h1 {
+                font-weight: bold;
+                font-size: 64px;
+                color: #ffffff;
+                text-shadow: 0px 0px 15px #00000038;
+
+                @media (max-width: 1339px){
+                    font-size: 55px;
+                }
+
+                @media (max-width: 1200px){
+                    font-size: 42px;
+                }
+
+                @media (max-width: 991px){
+                    font-size: 45px;
+                }
+            }
+            p {
+                font-size: 24px;
+                color: rgba(255, 255, 255, 0.9);
+
+                @media (max-width: 991px){
+                    font-size: 18px;
+                }
+            }
+
+            @media (max-width: 1200px){
+                width: 55%;
+            }
+
+            @media (max-width: 991px){
+                width: 50%;
+            }
+
+            @media (max-width: 768px){
+                display: none;
+            }
+        }
+
+        .authBox {
+            width: 40%;
+            padding: 0px 15px;
+            .authForm {
+                padding: 45px;
+                .titleBox {
+                    p {
+                        margin-bottom: 40px;
+                    }
+                }
+
+                .inputBox {
+                    margin-bottom: 30px;
+                    label {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                @media (max-width: 1200px){
+                    padding: 30px;
+                }
+            }
+
+            @media (max-width: 1200px){
+                width: 45%;
+            }
+
+            @media (max-width: 991px){
+                width: 50%;
+            }
+
+            @media (max-width: 768px){
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 991px) {
+            width: 80%;
+        }
+    }
+}
+
+.waveBg {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 90%;
+    background: linear-gradient(-45deg, #093954, #2436aa, #1b1c6f, #075d80);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    z-index: -1;
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .waves {
+        position: relative;
+        width: 100%;
+        height: 15vh;
+        margin-bottom: -7px;
+        min-height: 100px;
+        max-height: 150px;
+        transform: rotate(180deg);
+
+        /* Animation */
+        .parallax {
+            > use {
+                animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+            }
+            > use:nth-child(1) {
+                animation-delay: -2s;
+                animation-duration: 7s;
+            }
+            > use:nth-child(2) {
+                animation-delay: -3s;
+                animation-duration: 10s;
+            }
+            > use:nth-child(3) {
+                animation-delay: -4s;
+                animation-duration: 13s;
+            }
+            > use:nth-child(4) {
+                animation-delay: -5s;
+                animation-duration: 20s;
+            }
+
+            @keyframes move-forever {
+                0% {
+                    transform: translate3d(85px, 0, 0);
+                }
+                100% {
+                    transform: translate3d(-90px, 0, 0);
+                }
+            }
+        }
+        /*Shrinking for mobile*/
+        @media (max-width: 768px) {
+            .waves {
+                height: 40px;
+                min-height: 40px;
+            }
+        }
+    }
+
+    @media (max-width: 1200px){
+        height: 85%;
+    }
+}
